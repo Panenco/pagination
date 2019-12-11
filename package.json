@@ -9,7 +9,7 @@
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   },
-                  "repository": "git@github.com:Panenco/pagination.git",
+  "repository": "git@github.com:Panenco/pagination.git",
   "scripts": {
     "build": "rimraf dist && rollup -c",
     "lint": "eslint src --ext=jsx,ts,tsx --fix",
