@@ -11,7 +11,8 @@
     "build": "rimraf dist && rollup -c",
     "lint": "eslint src --ext=jsx,ts,tsx --fix",
     "prettier": "prettier '{src}/**/*.{js,jsx,ts,tsx}' --write",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "prepublishOnly": "npm run build"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
