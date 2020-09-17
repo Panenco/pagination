@@ -3,18 +3,20 @@ import * as React from 'react';
 interface ComponentState {
   perPage: number;
   sort: {
-    sort: string,
-    direction: string,
+    sort: string;
+    direction: string;
   };
   filter?: string;
 }
 
-const withTable = WrappedComponent =>
+const withTable = (WrappedComponent, defaultPerPage = 10) =>
   class extends React.Component<any, ComponentState> {
+    static displayName = `withTable(${WrappedComponent.displayName})`;
+
     constructor(props) {
       super(props);
       this.state = {
-        perPage: 10,
+        perPage: defaultPerPage,
         sort: {
           sort: '',
           direction: '',
